@@ -108,7 +108,8 @@ $ curl https://www.news.developeridn.com
         "judul":"Cara Membayar Fidiah, Tebusan Bagi yang Tak Bisa Berpuasa",
         "link":"https://www.cnnindonesia.com/gaya-hidup/20200506182707-284-500842/cara-membayar-fidiah-tebusan-bagi-yang-tak-bisa-berpuasa",
         "poster":"https://awsimages.detik.net.id/visual/2020/04/17/a4d493fd-90d3-4d05-8e7d-487a30fe2eea_169.jpeg?w=140&q=90",
-        "tipe":"Gaya Hidup","waktu":"12 menit yang lalu"
+        "tipe":"Gaya Hidup",
+        "waktu":"12 menit yang lalu"
        }
     ],
     "length":40,
