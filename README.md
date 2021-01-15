@@ -161,6 +161,9 @@ data: [
 }
 </pre>
 
+### LICENCE MIT
+maintainer rizkimaulana348@gmail.com
+
 
 
 
