@@ -1,3 +1,6 @@
+## Pengumunan
+API ini sudah tidak disimpan di server [developeridn.com](https://www.developeridn.com), untuk tetap menggunakan API ini silahkan upload script ini ke server anda
+
 # cnnindonesia-news-api
 kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
 
@@ -18,14 +21,14 @@ kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
   <tr>
     <td>1</td>
     <td>Index semua berita</td>
-    <td>https://www.news.developeridn.com/</td>
+    <td>/</td>
     <td>Tidak ada</td>
     <td>GET</td>
   </tr>
   <tr>
     <td>2</td>
     <td>Nasional</td>
-    <td>https://www.news.developeridn.com/nasional</td>
+    <td>/nasional</td>
     <td>Tidak ada</td>
     <td>GET</td>
   </tr>
@@ -33,7 +36,7 @@ kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
   <tr>
     <td>3</td>
     <td>Internasional</td>
-    <td>https://www.news.developeridn.com/internasional</td>
+    <td>/internasional</td>
     <td>Tidak ada</td>
     <td>GET</td>
   </tr>
@@ -41,7 +44,7 @@ kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
   <tr>
     <td>4</td>
     <td>Ekonomi</td>
-    <td>https://www.news.developeridn.com/ekonomi</td>
+    <td>/ekonomi</td>
     <td>Tidak ada</td>
     <td>GET</td>
   </tr>
@@ -49,7 +52,7 @@ kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
   <tr>
     <td>5</td>
     <td>Olahraga</td>
-    <td>https://www.news.developeridn.com/olahraga</td>
+    <td>/olahraga</td>
     <td>Tidak ada</td>
     <td>GET</td>
   </tr>
@@ -57,14 +60,14 @@ kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
   <tr>
     <td>6</td>
     <td>Teknologi</td>
-    <td>https://www.news.developeridn.com/teknologi</td>
+    <td>/teknologi</td>
     <td>Tidak ada</td>
     <td>GET</td>
   </tr>
   <tr>
     <td>7</td>
     <td>Hiburan</td>
-    <td>https://www.news.developeridn.com/hiburan</td>
+    <td>/hiburan</td>
     <td>Tidak ada</td>
     <td>GET</td>
   </tr>
@@ -72,7 +75,7 @@ kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
   <tr>
     <td>8</td>
     <td>Gaya Hidup</td>
-    <td>https://www.news.developeridn.com/gaya-hidupp</td>
+    <td>/gaya-hidupp</td>
     <td>Tidak ada</td>
     <td>GET</td>
   </tr>
@@ -80,7 +83,7 @@ kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
   <tr>
     <td>9</td>
     <td>Detail Berita</td>
-    <td>https://www.news.developeridn.com/detail/?url=</td>
+    <td>/detail/?url=</td>
     <td>url</td>
     <td>GET</td>
   </tr>
@@ -88,7 +91,7 @@ kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
   <tr>
     <td>10</td>
     <td>Pencarian Berita</td>
-    <td>https://www.news.developeridn.com/search/?q=</td>
+    <td>/search/?q=</td>
     <td>q</td>
     <td>GET</td>
   </tr>
@@ -120,7 +123,7 @@ $ curl https://www.news.developeridn.com
 request detail berita
 
 <pre>
-$ curl https://www.news.developeridn.com/detail/?url=https://www.cnnindonesia.com/internasional/20200513095240-134-502769/turis-jatuh-usai-nekat-kunjungi-yellowstone-saat-pandemi
+$ curl /detail/?url=https://www.cnnindonesia.com/internasional/20200513095240-134-502769/turis-jatuh-usai-nekat-kunjungi-yellowstone-saat-pandemi
 
 {
 data: [
@@ -137,7 +140,7 @@ data: [
 request pencarian berita
 
 <pre>
-$ curl https://www.news.developeridn.com/search/?q=indonesia
+$ curl /search/?q=indonesia
 
 {
 data: [
