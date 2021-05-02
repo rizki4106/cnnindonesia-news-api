@@ -1,6 +1,20 @@
 ## Pengumunan
 API ini sudah tidak disimpan di server [developeridn.com](https://www.developeridn.com), untuk tetap menggunakan API ini silahkan upload script ini ke server anda
 
+## Penggunaan di local server
+```bash
+git clone https://github.com/rizki4106/cnnindonesia-news-api.git
+```
+
+```bash
+cd cnnindonesia-news-api && pip install -r requirements.txt
+```
+
+```bash
+export FLASH_APP=main.py
+flask run
+```
+
 # cnnindonesia-news-api
 kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
 
