@@ -11,7 +11,7 @@ cd cnnindonesia-news-api && pip install -r requirements.txt
 ```
 
 ```bash
-export FLASH_APP=main.py
+export FLASK_APP=main.py
 flask run
 ```
 
