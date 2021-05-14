@@ -1,3 +1,5 @@
+`unofficial cnn indonesia api news`
+
 ## Pengumunan
 API ini sudah tidak disimpan di server [developeridn.com](https://www.developeridn.com), untuk tetap menggunakan API ini silahkan upload script ini ke server anda
 
@@ -177,9 +179,6 @@ data: [
   status: 200
 }
 </pre>
-
-### LICENCE MIT
-maintainer rizkimaulana348@gmail.com
 
 
 
