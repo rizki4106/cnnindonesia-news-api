@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from requests import get
-import json
+
+base_url = 'https://www.cnnindonesia.com'
 
 class Script:
 
@@ -12,17 +13,17 @@ class Script:
 
         for i in tag:
             try:
-                title = i.find('h2').text
-                link = i.find('a').get('href')
-                gambar = i.find('img').get('src')
-                tipe = i.find('span', class_="kanal").text
-                waktu = i.find('span', class_="date").text
+                title = i.find("h2", attrs={'class':'title'}).text.strip()
+                link = i.find('a')['href'].strip()
+                gambar = i.find('img')['src'].strip()
+                # tipe = i.find('span', attrs={'class':'kanal'}).text
+                # waktu = i.find('span', attrs={'class':'date'}).text
                 data.append({
                     "judul": title,
                     "link": link,
                     "poster": gambar,
-                    "tipe": tipe,
-                    "waktu": waktu
+                    # "tipe": tipe,
+                    # "waktu": waktu
                 })
             except:
                 pass
@@ -30,25 +31,25 @@ class Script:
         return data
 
     def index(self):
-        return self.query('https://www.cnnindonesia.com/')
+        return self.query('{}/'.format(base_url))
 
     def nasional(self):
-        return self.query('https://www.cnnindonesia.com/nasional')
+        return self.query('{}/nasional'.format(base_url))
     def internasional(self):
-        return self.query('https://www.cnnindonesia.com/internasional')
+        return self.query('{}/internasional'.format(base_url))
     def ekonomi(self):
-        return self.query('https://www.cnnindonesia.com/ekonomi')
+        return self.query('{}/ekonomi'.format(base_url))
     def olahraga(self):
-        return self.query('https://www.cnnindonesia.com/olahraga')
+        return self.query('{}/olahraga'.format(base_url))
 
     def teknologi(self):
-        return self.query('https://www.cnnindonesia.com/teknologi')
+        return self.query('{}/teknologi'.format(base_url))
 
     def hiburan(self):
-        return self.query('https://www.cnnindonesia.com/hiburan')
+        return self.query('{}/hiburan'.format(base_url))
 
     def social(self):
-        return self.query('https://www.cnnindonesia.com/gaya-hidup')
+        return self.query('{}/gaya-hidup'.format(base_url))
 
     def detail(self, url):
         data = []
@@ -72,7 +73,7 @@ class Script:
         return data
 
     def search(self,q):
-        return self.query('https://www.cnnindonesia.com/search/?query=' + q)
+        return self.query('{}/search/?query={}'.format(base_url, q))
 
 if __name__ != '__main__':
     Code = Script()
