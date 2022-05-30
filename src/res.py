@@ -1,3 +1,5 @@
+# Author : rizkimaulana348@gmail.com
+
 from flask import make_response, jsonify
 
 def success(values):
