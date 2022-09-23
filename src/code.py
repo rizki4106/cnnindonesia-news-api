@@ -4,13 +4,22 @@ from requests import get
 base_url = 'https://www.cnnindonesia.com'
 
 class CNN:
+    """
+    Mengambil berbagai berita dari website cnnindonesia.com
+    
+    Contoh:
+        - mengambil berita internasional
+        from src import cnn
+
+        print(cnn.berita_internasional())
+    """
 
     def query(self, url):
         """
-        It takes a URL as an argument, then it scrapes the page and returns a list of dictionaries
+        Mengambil data dari body berita
         
-        :param url: The URL of the page you want to scrape
-        :return: A list of dictionaries.
+        :param url: url yang datanya ingin diambil
+        :return: list dictionaries.
         """
         datas = get(url)
         soup = BeautifulSoup(datas.text, 'html.parser')
