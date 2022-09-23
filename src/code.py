@@ -8,7 +8,8 @@ class Script:
     def query(self, url):
         datas = get(url)
         soup = BeautifulSoup(datas.text, 'html.parser')
-        tag = soup.find_all('article')
+        parent_tag = soup.find('div', class_="media_rows")
+        tag = parent_tag.find_all("article")
         data = []
 
         for i in tag:
