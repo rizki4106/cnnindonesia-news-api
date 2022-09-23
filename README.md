@@ -1,7 +1,4 @@
-`unofficial cnn indonesia api news`
-
-## Pengumunan
-API ini sudah tidak disimpan di server [developeridn.com](https://www.developeridn.com), untuk tetap menggunakan API ini silahkan upload script ini ke server anda
+`Unofficial cnn indonesia api news`
 
 ## Penggunaan di local server
 ```bash
@@ -119,7 +116,7 @@ kumpulan berita dari bergai belahan dunia dan juga dari berbagai kategori
 request random berita
 
 <pre>
-$ curl https://www.news.developeridn.com
+$ curl http://localhost:5000
 
 {
   "data":[
@@ -139,7 +136,7 @@ $ curl https://www.news.developeridn.com
 request detail berita
 
 <pre>
-$ curl /detail/?url=https://www.cnnindonesia.com/internasional/20200513095240-134-502769/turis-jatuh-usai-nekat-kunjungi-yellowstone-saat-pandemi
+$ curl http://localhost:5000/detail/?url=https://www.cnnindonesia.com/internasional/20200513095240-134-502769/turis-jatuh-usai-nekat-kunjungi-yellowstone-saat-pandemi
 
 {
 data: [
@@ -156,7 +153,7 @@ data: [
 request pencarian berita
 
 <pre>
-$ curl /search/?q=indonesia
+$ curl http://localhost:5000/search/?q=indonesia
 
 {
 data: [
