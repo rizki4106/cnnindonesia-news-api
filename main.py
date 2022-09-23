@@ -3,58 +3,58 @@ from src import res
 app = Flask(__name__)
 
 # import module from ./src
-from src import Code
+from src import cnn
 
 @app.route('/')
 def home():
-    response = Code.index()
+    response = cnn.index()
     return res.success(response)
 
 @app.route('/nasional')
 def nasional():
-    response = Code.nasional()
+    response = cnn.berita_nasional()
     return res.success(response)
 
 @app.route('/internasional')
 def internasional():
-    response = Code.internasional()
+    response = cnn.berita_internasional()
     return res.success(response)
 
 @app.route('/ekonomi')
 def ekonomi():
-    response = Code.ekonomi()
+    response = cnn.berita_ekonomi()
     return res.success(response)
 
 @app.route('/olahraga')
 def olahraga():
-    response = Code.olahraga()
+    response = cnn.berita_olahraga()
     return res.success(response)
 
 @app.route('/teknologi')
 def teknologi():
-    response = Code.teknologi()
+    response = cnn.berita_teknologi()
     return res.success(response)
 
 @app.route('/hiburan')
 def hiburan():
-    response = Code.hiburan()
+    response = cnn.berita_hiburan()
     return res.success(response)
 
 @app.route('/gaya-hidup')
 def social():
-    response = Code.social()
+    response = cnn.berita_social()
     return res.success(response)
 
 @app.route('/detail/')
 def detail():
     url = request.args.get('url')
-    response = Code.detail(url)
+    response = cnn.detail(url)
     return res.success(response)
 
 @app.route('/search/')
 def search():
     param = request.args.get('q')
-    response = Code.search(param)
+    response = cnn.search(param)
     return res.success(response)
 
 

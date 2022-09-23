@@ -1,2 +1,2 @@
-from .code import Code
+from .code import cnn
 from .res import success

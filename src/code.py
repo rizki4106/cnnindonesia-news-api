@@ -3,7 +3,7 @@ from requests import get
 
 base_url = 'https://www.cnnindonesia.com'
 
-class Script:
+class CNN:
 
     def query(self, url):
         """
@@ -44,7 +44,7 @@ class Script:
         """
         return self.query('{}/'.format(base_url))
 
-    def nasional(self):
+    def berita_nasional(self):
         """
         Mengambil berita nasional
 
@@ -52,7 +52,7 @@ class Script:
         """
         return self.query('{}/nasional'.format(base_url))
 
-    def internasional(self):
+    def berita_internasional(self):
         """
         Mengambil berita internasional / luar negeri
         
@@ -60,7 +60,7 @@ class Script:
         """
         return self.query('{}/internasional'.format(base_url))
 
-    def ekonomi(self):
+    def berita_ekonomi(self):
         """
         Mengambil berita ekonomi
         
@@ -68,7 +68,7 @@ class Script:
         """
         return self.query('{}/ekonomi'.format(base_url))
 
-    def olahraga(self):
+    def berita_olahraga(self):
         """
         Mengambil berita olahraga
         
@@ -76,7 +76,7 @@ class Script:
         """
         return self.query('{}/olahraga'.format(base_url))
 
-    def teknologi(self):
+    def berita_teknologi(self):
         """
         Mengambil berita teknologi
         
@@ -84,7 +84,7 @@ class Script:
         """
         return self.query('{}/teknologi'.format(base_url))
 
-    def hiburan(self):
+    def berita_hiburan(self):
         """
         Mengambil berita hiburan
         
@@ -92,7 +92,7 @@ class Script:
         """
         return self.query('{}/hiburan'.format(base_url))
 
-    def social(self):
+    def berita_social(self):
         """
         Mengambil berita sosial
         
@@ -137,8 +137,8 @@ class Script:
             q : string -> query atau berita yang ingin dicari
         :returns: list dictionary
         """
-        
+
         return self.query('{}/search/?query={}'.format(base_url, q))
 
 if __name__ != '__main__':
-    Code = Script()
+    cnn = CNN()
